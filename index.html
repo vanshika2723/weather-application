@@ -1,28 +1,126 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="main.css" />
+
+  <title>Weather App | Real-Time Weather</title>
+
+  <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
+
   <div class="app-wrap">
-    <header>
-      <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+
+    <!-- Background Decoration -->
+    <div class="circle circle-one"></div>
+    <div class="circle circle-two"></div>
+
+    <header class="header">
+      <div class="brand">
+        <span class="weather-icon">☁️</span>
+        <div>
+          <h1>WeatherNow</h1>
+          <p>Real-time weather updates</p>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          autocomplete="off"
+          class="search-box"
+          placeholder="Search for a city..."
+          aria-label="Search for a city"
+        />
+
+        <button class="search-btn" type="button" aria-label="Search weather">
+          🔍
+        </button>
+      </div>
     </header>
+
     <main>
+
+      <!-- Location -->
       <section class="location">
         <div class="city">New York, US</div>
-        <div class="date">Wednesday 22 July 2020</div>
+        <div class="date">Wednesday, 22 July 2020</div>
       </section>
-      <div class="current">
-        <div class="temp">15<span>°c</span></div>
-        <div class="weather">Sunny</div>
-        <div class="hi-low">13°c / 16°c</div>
-      </div>
+
+      <!-- Weather Card -->
+      <section class="weather-card">
+
+        <div class="weather-top">
+          <div class="weather-status">
+            <div class="weather-emoji">☀️</div>
+
+            <div>
+              <div class="weather">Sunny</div>
+              <p class="weather-description">
+                Clear sky
+              </p>
+            </div>
+          </div>
+
+          <div class="temp">
+            15<span>°C</span>
+          </div>
+        </div>
+
+        <div class="weather-details">
+
+          <div class="detail-box">
+            <span class="detail-icon">🌡️</span>
+            <div>
+              <small>Feels Like</small>
+              <strong class="feels-like">15°C</strong>
+            </div>
+          </div>
+
+          <div class="detail-box">
+            <span class="detail-icon">💧</span>
+            <div>
+              <small>Humidity</small>
+              <strong class="humidity">--%</strong>
+            </div>
+          </div>
+
+          <div class="detail-box">
+            <span class="detail-icon">⬇️</span>
+            <div>
+              <small>Min Temp</small>
+              <strong class="min-temp">13°C</strong>
+            </div>
+          </div>
+
+          <div class="detail-box">
+            <span class="detail-icon">⬆️</span>
+            <div>
+              <small>Max Temp</small>
+              <strong class="max-temp">16°C</strong>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Error Message -->
+      <div class="error-message"></div>
+
     </main>
+
+    <footer>
+      <p>Powered by Weather API • Built with HTML, CSS & JavaScript</p>
+    </footer>
+
   </div>
+
   <script src="main.js"></script>
+
 </body>
 </html>
+
